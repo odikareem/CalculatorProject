@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
   <title>Calculator</title>
 </head>
 <body>
-    <div class="wrapper">
-      <h1 class="h1">SIMPLE CALCULATOR!</h1>
-      
-        <input type="text" id="num1" align="left" class="input">
-        <input type="text" id="num2" align="right" class="input">
-
-        <br><br>      
-        
-        <input type="button" id="plus" value="+" class="keys" onclick="addition()">
-        <input type="button" id="minus" value="-" class="keys" onclick="subtraction()">
-        <input type="button" id="multiply" value="*" class="keys" onclick="multiplication()">
+    <div id="calculator">
+      <h1>Simple Calculator!</h1>
+      <form method="get" name="calc">
+        <input type="text" id="num1" align="left">
+        <input type="text" id="num2" align="right">
+      </form>
         <br>
-        <input type="button" id="divide" value="/" class="keys" onclick="division()">
-        <input type="button" id="modulus" value="%" class="keys" onclick="modulus()">
-        <input type="button" id="power" value="^" class="keys" onclick="power()">
-        <br>
-        <input type="button" id="reset" value="C" class="keys">
-        <input type="button" id="ans" value="ANS" class="keys">
+        <form method="post">
+        <input type="button" id="keys" value="+" onclick="addtoscreen('+')">
+        <input type="button" id="keys" value="-" onclick="addtoscreen('-')">
+        <input type="button" id="keys" value="*" onclick="addtoscreen('*')">
+        <input type="button" id="keys" value="/" onclick="addtoscreen('/')">
+        <input type="button" id="keys" value="%" onclick="addtoscreen('%')">
+        <input type="button" id="keys" value="^" onclick="addtoscreen('^')">
+        <input type="button" id="keys" value="C" onclick="addtoscreen('C')">
 
+        <input type="button" id="equals" value="Compute" onclick="answer()">
         <br><br>
+        <input type="text" id="display" disabled>
+      </form>
 
-        <div id="display" class="display"></div>
-      </div>
 
-<script type="text/javascript" src="js/calc.js"></script>
+    </div>
+
+
+
+
+<script type="text/javascript" src="scripts/calc.js"></script>
 </body>
 </html>
